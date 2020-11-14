@@ -1,0 +1,8 @@
+ftp.txt
+wp-config.php
+wordpress/*.php
+wordpress/wp-admin
+wordpress/wp-includes
+wordpress/wp-content/plugins
+!wordpress/wp-content/themes/**
+!docs

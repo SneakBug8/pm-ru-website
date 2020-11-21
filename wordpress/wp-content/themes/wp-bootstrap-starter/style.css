@@ -45,7 +45,6 @@ body {
   -webkit-font-smoothing: auto;
 }
 
-article,
 aside,
 details,
 figcaption,
@@ -207,6 +206,13 @@ table {
 td,
 th {
   padding: 0;
+}
+
+article{
+  display: flex;
+}
+.post-thumbnail{
+  margin-right: 2%;
 }
 
 /*--------------------------------------------------------------
@@ -393,6 +399,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
   background: #000 none repeat scroll 0 0;
 }
 
+
 .dropdown-menu .dropdown-toggle::after {
   border-bottom: 0.3em solid transparent;
   border-left: 0.3em solid;
@@ -559,6 +566,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
 .post-navigation .nav-next a:hover {
   background: #eee none repeat scroll 0 0;
 }
+
 
 /*--------------------------------------------------------------
 # Accessibility

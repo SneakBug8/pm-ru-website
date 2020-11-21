@@ -13,7 +13,8 @@
 	<div class="post-thumbnail">
 		<?php the_post_thumbnail(); ?>
 	</div>
-	<header class="entry-header">
+	<div class="content_left">
+		<header class="entry-header">
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -29,6 +30,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
+
 		<?php
         if ( is_single() ) :
 			the_content();
@@ -46,4 +48,5 @@
 	<footer class="entry-footer">
 		<?php wp_bootstrap_starter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	</div>
 </article><!-- #post-## -->

@@ -1,5 +1,7 @@
 # История разработки
 
+![](https://i.imgur.com/v8fU5Ta.png)
+
 Ответ куратора в ходе выяснения Customer Expectations, чтобы не возникло проблем при оценивании проекта:
 ![](https://i.imgur.com/Q7vMCEo.png)
 

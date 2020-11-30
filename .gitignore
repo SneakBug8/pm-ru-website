@@ -1,8 +1,10 @@
 ftp.txt
 wp-config.php
-wordpress/*.php
-wordpress/wp-admin
-wordpress/wp-includes
-wordpress/wp-content/plugins
-!wordpress/wp-content/themes/**
+src/*.php
+src/wp-admin
+src/wp-includes
+src/wp-content/plugins
+src/wp-content/languages
+src/wp-content/uploads
+!src/wp-content/themes/**
 !docs

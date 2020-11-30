@@ -1,0 +1,7 @@
+- [Главная](/)
+- Инд. планы
+    - [Наконечный П.](/reports/nakonechnyy-p.md)
+    - [Руднев Н.](/reports/rudnev-n.md)
+    - [Сидоров В.](/reports/sidorov-v.md)
+- [Отчёты по встречам](/meetups.md)
+- [История разработки](/history.md)

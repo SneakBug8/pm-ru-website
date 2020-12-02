@@ -214,6 +214,12 @@ article{
 .post-thumbnail{
   margin-right: 2%;
 }
+@media(min-width: 576px){
+  .col-sm-12{
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+  }
+}
 
 /*--------------------------------------------------------------
 # Typography
@@ -224,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   margin-top: 24px;
   margin-bottom: 15px;
-  font-family: 'Tinos', serif;
+  font-family: 'Verdana', sans-serif;
 }
 h1 {
   font-size: 32px;
@@ -250,7 +256,7 @@ h5 {
 
 p {
   margin-bottom: 1.5em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Georgia', serif;
 }
 h1.entry-title {
   font-size: 1.31rem;
@@ -259,11 +265,11 @@ h1.entry-title {
 h2.entry-title {
   border-bottom: 1px solid #eaecef;
 }
-h3.widget-title {
+/*h3.widget-title {
   font-size: 1.2rem;
-}
+}*/
 a{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Georgia', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -311,7 +317,7 @@ header#masthead {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-family: 'Tinos', serif;
+  font-family: 'Verdana', sans-serif;
 }
 
 .navbar-brand > a:visited, .navbar-brand > a:hover {
@@ -366,9 +372,34 @@ a.page-scroller {
     margin: 0 auto;
   }
 }
+.entry-title > a {
+	font-family: 'Verdana', sans-serif;
+}
+.entry-meta > text{
+  display: none;
+}
+.widget_recent_comments{
+  display: none;
+}
+@media (min-width: 576px){
+  .post-thumbnail{
+    max-width: 50%;
+  }
+}
+@media (max-width: 480px){
+  .post-thumbnail{
+    padding-right: 0%;
+  }
+  .content_right{
+    width: 200%;
+  }
+}
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
+
+//*[@id="post-5"]/div[2]/header/div/text()[2]
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -514,6 +545,12 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
   .navbar-light .navbar-toggler {
     border: medium none;
     outline: none;
+  }
+  aside a{
+    font-size: 140%;
+  }
+  aside h3 {
+    font-size: 200%;
   }
 }
 .site-main .comment-navigation,
@@ -777,6 +814,13 @@ a img.aligncenter {
   color: inherit;
   font-size: 1.7rem;
 }
+.comments-link{
+  display: none;
+}
+.entry-content a{
+ 
+  color: inherit;
+}
 
 /*--------------------------------------------------------------
 ## Comments
@@ -1036,6 +1080,8 @@ body:not(.theme-preset-active) footer#colophon {
   html {
     font-size: 85%;
   }
+  
+
 }
 /*--------------------------------------------------------------
 ## iPad

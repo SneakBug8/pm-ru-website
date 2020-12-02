@@ -267,6 +267,10 @@ function wp_bootstrap_starter_password_form() {
 }
 add_filter( 'the_password_form', 'wp_bootstrap_starter_password_form' );
 
+add_filter('excerpt_more', function($more) {
+                return '...';
+});
+
 
 
 /**

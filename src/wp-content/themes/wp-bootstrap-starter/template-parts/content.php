@@ -10,43 +10,73 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
-	</div>
-	<div class="content_left">
-		<header class="entry-header">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+	<?php
+		if(get_the_post_thumbnail()!=null){
+			echo '<div class="post-thumbnail col-sm-12 col-lg-6">';
+				the_post_thumbnail();
+			echo '</div>';
+			echo '<div class="content_right">';
+			echo '<header class="entry-header">';
+			if ( is_single() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php wp_bootstrap_starter_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
-	<div class="entry-content">
+			if ( 'post' === get_post_type() ){
+				echo '<div class="entry-meta">';
+				wp_bootstrap_starter_posted_on();
+				echo '</div><!-- .entry-meta -->';
+			}
+		
+			echo '</header><!-- .entry-header -->';
+			echo '<div class="entry-content">';
+			if (is_single()) {
+				the_content();
+			}
+			else{
+				$str = get_the_excerpt();
+				$aa = "<a href=/?p=".get_the_ID().">".$str."</a>";
+				echo $aa;
+			}
+			echo '</div><!-- .entry-content -->';
 
-		<?php
-        if ( is_single() ) :
-			the_content();
-        else :
-            the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter' ) );
-        endif;
+			echo '<footer class="entry-footer">';
+			wp_bootstrap_starter_entry_footer();
+			echo '</footer><!-- .entry-footer -->';
+			echo '</div>'; 
+		}
+		else{
+			echo '<div class="content_right">';
+			echo '<header class="entry-header">';
+			if ( is_single() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-bootstrap-starter' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+			if ( 'post' === get_post_type() ){
+				echo '<div class="entry-meta">';
+				wp_bootstrap_starter_posted_on();
+				echo '</div><!-- .entry-meta -->';
+			}
+		
+			echo '</header><!-- .entry-header -->';
+			echo '<div class="entry-content">';
+			if (is_single()) {
+				the_content();
+			}
+			else{
+				$str = get_the_excerpt();
+				$aa = "<a href=/?p=".get_the_ID().">".$str."</a>";
+				echo $aa;
+			}
+			echo '</div><!-- .entry-content -->';
 
-	<footer class="entry-footer">
-		<?php wp_bootstrap_starter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-	</div>
+			echo '<footer class="entry-footer">';
+			wp_bootstrap_starter_entry_footer();
+			echo '</footer><!-- .entry-footer -->';
+			echo '</div>'; 
+		}
+	?>
 </article><!-- #post-## -->

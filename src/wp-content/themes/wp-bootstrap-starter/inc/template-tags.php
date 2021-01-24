@@ -1,12 +1,4 @@
 <?php
-/**
- * Custom template tags for this theme
- *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package WP_Bootstrap_Starter
- */
-
 if ( ! function_exists( 'wp_bootstrap_starter_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
@@ -188,4 +180,4 @@ if ( ! function_exists( 'wp_bootstrap_starter_comment' ) ) :
             <?php
         endif;
     }
-endif; // ends check for wp_bootstrap_starter_comment()
+endif;

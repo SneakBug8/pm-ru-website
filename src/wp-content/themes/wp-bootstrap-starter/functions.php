@@ -1,56 +1,17 @@
 <?php
-/**
- * WP Bootstrap Starter functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package WP_Bootstrap_Starter
- */
+
 
 if ( ! function_exists( 'wp_bootstrap_starter_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
 function wp_bootstrap_starter_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on WP Bootstrap Starter, use a find and replace
-	 * to change 'wp-bootstrap-starter' to the name of your theme in all the template files.
-	 */
 	load_theme_textdomain( 'wp-bootstrap-starter', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
 	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'wp-bootstrap-starter' ),
 	) );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
 	add_theme_support( 'html5', array(
 		'comment-form',
 		'comment-list',
@@ -63,7 +24,6 @@ function wp_bootstrap_starter_setup() {
 		'default-image' => '',
 	) ) );
 
-	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
     function wp_boostrap_starter_add_editor_styles() {
@@ -203,12 +163,6 @@ function wp_bootstrap_starter_scripts() {
     if(get_theme_mod( 'preset_style_setting' ) && get_theme_mod( 'preset_style_setting' ) !== 'default') {
         wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'preset_style_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/typography/'.get_theme_mod( 'preset_style_setting' ).'.css', false, '' );
     }
-    //Color Scheme
-    /*if(get_theme_mod( 'preset_color_scheme_setting' ) && get_theme_mod( 'preset_color_scheme_setting' ) !== 'default') {
-        wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'preset_color_scheme_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/'.get_theme_mod( 'preset_color_scheme_setting' ).'.css', false, '' );
-    }else {
-        wp_enqueue_style( 'wp-bootstrap-starter-default', get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/blue.css', false, '' );
-    }*/
 
 	wp_enqueue_script('jquery');
 

@@ -1,13 +1,4 @@
-<?php
-/**
- * Template part for displaying page content
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WP_Bootstrap_Starter
- */
-
-?>
+<?php ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">

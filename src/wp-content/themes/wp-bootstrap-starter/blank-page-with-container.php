@@ -1,7 +1,5 @@
 <?php
-/**
- * Template Name: Blank with Container
- */
+
 
 get_header();
 ?>

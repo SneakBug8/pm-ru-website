@@ -1,11 +1,5 @@
 <?php
 /**
- * WP Bootstrap Starter Theme Customizer
- *
- * @package WP_Bootstrap_Starter
- */
-
-/**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.

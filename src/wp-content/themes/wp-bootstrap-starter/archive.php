@@ -1,10 +1,5 @@
 <?php
-/**
- * The template for displaying archive pages
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WP_Bootstrap_Starter
+Bootstrap_Starter
  */
 
 get_header(); ?>
